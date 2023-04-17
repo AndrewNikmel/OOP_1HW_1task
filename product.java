@@ -1,10 +1,12 @@
 public class product {
-    public Integer getCost(){
+    public Integer getCost() {
         return cost;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
+
     private String name;
 
     private Integer cost;
@@ -13,6 +15,7 @@ public class product {
         this.name = name;
         this.cost = cost;
     }
+
     @Override
     public String toString() {
         // TODO Auto-generated method stub

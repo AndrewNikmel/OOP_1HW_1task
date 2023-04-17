@@ -3,13 +3,14 @@
  */
 public class main {
 
-    public static void main(String[] args) {
+    public static void task(String[] args) {
         vendingMachine vendingMachine = new vendingMachine();
         vendingMachine.addProduct(new product("cheese", 300))
-            .addProduct(new product("water", 10)) // returns the object, we can return as much as we need
-            .addProduct(new product("wine", 330))
-            .addProduct(new yoghurt("Danone", 300, "sweet"))
-            .addProduct(new cigarets("Minsk", 62, "Bulba"));
+                .addProduct(new product("water", 10)) // returns the object, we can return as much as we need
+                .addProduct(new product("wine", 330))
+                .addProduct(new yoghurt("Danone", 300, "sweet"))
+                .addProduct(new cigarets("Minsk", 62, "Bulba"))
+                .addProduct(new fruits("Orange", 54, "Rotten")); // hw
         System.out.println("---We have:---");
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
@@ -36,9 +37,13 @@ public class main {
         try {
             product stuff = vendingMachine.selProduct(vendingMachine.findProduct("JimBeam"));
             System.out.println(stuff);
-            
+
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
+        }
+        System.out.println("---Anyway we have following items:---"); // hw
+        for (int i = 0; i < vendingMachine.getList().size(); i++) { // hw
+            System.out.println(vendingMachine.getList().get(i)); // hw
         }
     }
 }
