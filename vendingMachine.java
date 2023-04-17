@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.RuntimeErrorException;
+
 
 public class vendingMachine {
 
@@ -29,9 +31,15 @@ public class vendingMachine {
         return null;
     }
     public product selProduct(product product){
-        product prodFound = findProduct(product.getName());
-        getList().remove(prodFound);
-        amount += prodFound.getCost();
-        return prodFound;
+        try{
+            product prodFound = findProduct(product.getName());
+            getList().remove(prodFound);
+            amount += prodFound.getCost();
+            return prodFound;
+
+        } catch(Exception ex) {
+            throw new RuntimeException("The item was not found");
+        }
+        
     }
 }

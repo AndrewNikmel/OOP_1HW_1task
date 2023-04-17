@@ -32,6 +32,13 @@ public class main {
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
-
+        System.out.println("---We buy again:---");
+        try {
+            product stuff = vendingMachine.selProduct(vendingMachine.findProduct("JimBeam"));
+            System.out.println(stuff);
+            
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
