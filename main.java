@@ -13,7 +13,13 @@ public class main {
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
-        product found = vendingMachine.findProduct("wodka");
+        product found = vendingMachine.findProduct("Minsk");
         System.out.println(found);
+        product sold = vendingMachine.selProduct(found);
+        System.out.println(sold);
+        System.out.println(vendingMachine.getAmount()); // to get "System.out.println()" we just have to type in "sout"
+        for (int i = 0; i < vendingMachine.getList().size(); i++) {
+            System.out.println(vendingMachine.getList().get(i));
+        }
     }
 }
