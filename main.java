@@ -13,5 +13,7 @@ public class main {
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
+        product found = vendingMachine.findProduct("wodka");
+        System.out.println(found);
     }
 }
