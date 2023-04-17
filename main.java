@@ -7,7 +7,8 @@ public class main {
         vendingMachine vendingMachine = new vendingMachine();
         vendingMachine.addProduct(new product("cheese", 300))
             .addProduct(new product("water", 10)) // returns the object, we can return as much as we need
-            .addProduct(new product("wine", 330));
+            .addProduct(new product("wine", 330))
+            .addProduct(new yoghurt("Danone", 300, "sweet"));
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
